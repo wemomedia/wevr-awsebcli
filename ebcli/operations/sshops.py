@@ -40,7 +40,6 @@ def ssh_into_instance(instance_id, keep_open=False, force_open=False, private=Fa
     except KeyError:
         raise NotFoundError(strings['ssh.noip'])
     security_groups = instance['SecurityGroups']
-    print "IP: %s, %s" % (ip, private)
 
     user = 'ec2-user'
 
