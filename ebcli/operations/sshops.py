@@ -27,14 +27,17 @@ LOG = minimal_logger(__name__)
 
 
 def ssh_into_instance(instance_id, keep_open=False, force_open=False,
-                      custom_ssh=False, command=False):
+                      custom_ssh=False, command=False, private=False):
     instance = ec2.describe_instance(instance_id)
     try:
         keypair_name = instance['KeyName']
     except KeyError:
         raise NoKeypairError()
     try:
-        ip = instance['PublicIpAddress']
+        if (private): 
+            ip = instance['PrivateIpAddress']
+        else:
+            ip = instance['PublicIpAddress']
     except KeyError:
         raise NotFoundError(strings['ssh.noip'])
     security_groups = instance['SecurityGroups']

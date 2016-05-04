@@ -379,6 +379,7 @@ flag_text = {
     'ssh.custom': "Specify an SSH command to use instead of 'ssh -i keyfile'. Do not include the remote user and hostname.",
     'ssh.force': 'force port 22 open to 0.0.0.0',
     'ssh.setup': 'setup SSH for the environment',
+    'ssh.private': 'Use instance private IP when conecting',
 
     # terminate
     'terminate.force': 'skip confirmation prompt',
