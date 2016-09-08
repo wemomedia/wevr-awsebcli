@@ -3,6 +3,22 @@ Changelog
 =========
 
 ------------------
+3.7.8 (2016-08-22)
+------------------
+- Fixed 'eb setenv --timeout' problem
+- Updated 'eb config' inline doc to be clearer on functionality
+- Fixed 'eb deploy --nohang' problem
+- Added commands '--command' and '--custom' to 'eb ssh'
+- Added support for Application Load Balancer with 'create', 'health' and 'status'
+
+------------------
+3.7.7 (2016-06-27)
+------------------
+- Added "ap-south-1" to region list
+- Checking for existing app versions in application, local or in their account, before creating one when label is specified.
+- Updating environment name length constraints to 40 char max.
+
+------------------
 3.7.6 (2016-04-14)
 ------------------
 - The Elastic Beanstalk Service role will now also be created during non-interactive environment creates
