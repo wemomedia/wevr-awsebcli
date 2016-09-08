@@ -377,7 +377,6 @@ flag_text = {
     'ssh.keepopen': 'keep port 22 open',
     'ssh.force': 'force port 22 open to 0.0.0.0',
     'ssh.setup': 'setup SSH for the environment',
-    'ssh.private': 'Use instance private IP when conecting',
 
     # terminate
     'terminate.force': 'skip confirmation prompt',
